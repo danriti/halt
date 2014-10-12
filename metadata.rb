@@ -6,3 +6,4 @@ description      'Installs/Configures halt'
 long_description 'Installs/Configures halt'
 version          '0.1.0'
 
+depends 'google-chrome'
