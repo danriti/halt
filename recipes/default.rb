@@ -4,6 +4,8 @@
 #
 # Copyright (c) 2014 The Authors, All Rights Reserved.
 
+# Packages
+# ---------------------
 package 'ubuntu-desktop'
 package 'ssh'
 package 'vim'
@@ -20,6 +22,8 @@ package 'xfonts-terminus'
 include_recipe 'google-chrome'
 
 
+# User Land
+# ---------------------
 user "driti" do
   supports :manage_home => true
   home "/home/driti"
@@ -32,7 +36,7 @@ group "ubuntu" do
   members ["ubuntu", "driti"]
 end
 
-%w{bin dev opt tmp work}.each do |dir|
+node['halt']['directories'].each do |dir|
   directory "/home/driti/#{dir}" do
     owner 'driti'
     group 'driti'
@@ -51,6 +55,10 @@ remote_file "/home/driti/.vimrc" do
   user "driti"
   group "driti"
 end
+
+
+# Development
+# ---------------------
 
 # python / virtualenv
 # py3k
