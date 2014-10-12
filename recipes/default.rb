@@ -16,6 +16,7 @@ package 'firefox'
 package 'i3'
 package 'scrot'
 package 'feh'
+package 'meld'
 package 'rxvt-unicode-256color'
 package 'xfonts-terminus'
 
@@ -26,9 +27,9 @@ include_recipe 'google-chrome'
 # ---------------------
 user "driti" do
   supports :manage_home => true
+  comment "driti"
   home "/home/driti"
   shell "/bin/bash"
-  system true
   action :create
 end
 
@@ -43,11 +44,22 @@ node['halt']['home_directories'].each do |dir|
   end
 end
 
+
+# Configs
+# ---------------------
 git "/home/driti/dev/config" do
   repository "https://github.com/danriti/configs.git"
   revision "master"
   user "driti"
   group "driti"
+end
+
+node["halt"]["dot_files"].each do |file|
+  remote_file "/home/driti/#{file[0]}" do
+    source "file://#{file[1]}"
+    user "driti"
+    group "driti"
+  end
 end
 
 
@@ -92,6 +104,3 @@ end
 # gvm
 # heroku-toolbelt
 # hub
-
-# vim plugins - https://supermarket.getchef.com/cookbooks/vim_config
-# - pathogen or vundle

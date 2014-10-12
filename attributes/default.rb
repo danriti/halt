@@ -4,6 +4,17 @@ default["halt"]["home_directories"] = [
   "/home/driti/opt", 
   "/home/driti/tmp", 
   "/home/driti/work",
+  "/home/driti/.i3",
+]
+
+default["halt"]["dot_files"] = [
+  [".bashrc",    "/home/driti/dev/config/.bashrc"],
+  [".gitconfig", "/home/driti/dev/config/.gitconfig"],
+  [".i3/config", "/home/driti/dev/config/.i3/config"],
+  [".jshintrc",  "/home/driti/dev/config/.jshintrc"],
+  [".pylintrc",  "/home/driti/dev/config/.pylintrc"],
+  [".tmux.conf", "/home/driti/dev/config/.tmux.conf"],
+  [".Xdefaults", "/home/driti/dev/config/.Xdefaults"],
 ]
 
 default["halt"]["pathogen_directories"] = [
@@ -22,5 +33,5 @@ default["halt"]["vim_plugins"] = [
   ["vim-less",          "https://github.com/groenewege/vim-less.git"],
   ["vim-markdown",      "https://github.com/plasticboy/vim-markdown.git"],
   ["vim-ruby",          "https://github.com/vim-ruby/vim-ruby.git"],
-  ["xoria256",          "https://github.com/vim-scripts/xoria256.vim"]
+  ["xoria256",          "https://github.com/vim-scripts/xoria256.vim"],
 ]
