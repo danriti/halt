@@ -1,5 +1,6 @@
 # halt
-====
+
+Chef cookbook for building my personal development environment.
 
 ## Prerequisites
 
