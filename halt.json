@@ -1,0 +1,10 @@
+{
+  "run_list": [
+    "recipe[halt]",
+    "recipe[halt::packages]",
+    "recipe[halt::user]",
+    "recipe[halt::configs]",
+    "recipe[halt::vim]",
+    "recipe[halt::tools]"
+  ]
+}

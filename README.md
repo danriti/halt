@@ -10,5 +10,6 @@ Chef cookbook for building my personal development environment.
 ## Getting Started
 
 ```bash
-$ sudo chef-client --local-mode --runlist 'recipe[halt]'
+$ cd /path/to/cookbooks
+$ sudo chef-client --local-mode -j halt/halt.json
 ```
