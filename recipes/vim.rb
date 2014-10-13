@@ -10,7 +10,7 @@ node['halt']['pathogen_directories'].each do |dir|
 end
 
 remote_file "/home/driti/.vimrc" do
-  source "file:///home/driti/dev/config/.vimrc"
+  source "file:///home/driti/dev/configs/.vimrc"
   user "driti"
   group "driti"
 end

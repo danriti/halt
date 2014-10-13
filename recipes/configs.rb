@@ -2,7 +2,7 @@
 # Cookbook Name:: halt
 # Recipe:: configs
 
-git "/home/driti/dev/config" do
+git "/home/driti/dev/configs" do
   repository "https://github.com/danriti/configs.git"
   revision "master"
   user "driti"
@@ -15,4 +15,8 @@ node["halt"]["dot_files"].each do |file|
     user "driti"
     group "driti"
   end
+end
+
+execute "install bin scripts" do
+  command "cp /home/driti/dev/configs/bin/* /home/driti/bin/"
 end

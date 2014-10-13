@@ -8,13 +8,13 @@ default["halt"]["home_directories"] = [
 ]
 
 default["halt"]["dot_files"] = [
-  [".bashrc",    "/home/driti/dev/config/.bashrc"],
-  [".gitconfig", "/home/driti/dev/config/.gitconfig"],
-  [".i3/config", "/home/driti/dev/config/.i3/config"],
-  [".jshintrc",  "/home/driti/dev/config/.jshintrc"],
-  [".pylintrc",  "/home/driti/dev/config/.pylintrc"],
-  [".tmux.conf", "/home/driti/dev/config/.tmux.conf"],
-  [".Xdefaults", "/home/driti/dev/config/.Xdefaults"],
+  [".bashrc",    "/home/driti/dev/configs/.bashrc"],
+  [".gitconfig", "/home/driti/dev/configs/.gitconfig"],
+  [".i3/config", "/home/driti/dev/configs/.i3/config"],
+  [".jshintrc",  "/home/driti/dev/configs/.jshintrc"],
+  [".pylintrc",  "/home/driti/dev/configs/.pylintrc"],
+  [".tmux.conf", "/home/driti/dev/configs/.tmux.conf"],
+  [".Xdefaults", "/home/driti/dev/configs/.Xdefaults"],
 ]
 
 default["halt"]["pathogen_directories"] = [
