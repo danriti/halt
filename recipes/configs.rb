@@ -17,6 +17,9 @@ node["halt"]["dot_files"].each do |file|
   end
 end
 
+source_path = "/home/driti/dev/configs/bin/"
+destination_path = "/home/driti/bin/"
 execute "install bin scripts" do
-  command "cp /home/driti/dev/configs/bin/* /home/driti/bin/"
+  command "cp #{source_path}/* #{destination_path}"
+  not_if "diff -r #{source_path} #{destination_path}"
 end
